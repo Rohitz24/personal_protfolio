@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyPortfolio.</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Rohit Zade</span></h1>
+            <h3>Frontend Developer</h3>
+            <p>I build interactive and responsive web applications.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="hero-image">
+            <img src="pic.jpg" alt="Profile Picture">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate developer with a knack for creating elegant solutions in the least amount of time. I graduated from Rashtrasant Tukdoji Maharaj with a degree in Bachelor of Computer Application(BCA) and Postgraduted from Savitribai Phule Pune University with a degree in Master of Computer Application(MCA).</p>
+                    <br>
+                    <p><strong>Hobbies:</strong> Photography, Gaming, and Chess.</p>
+                    <br>
+                    <a href="Rohit_Resume.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+    <div class="project-card">
+        <img src="calc.png" alt="Project 1">
+        <div class="project-info">
+            <h3>Calculator App</h3>
+            <p>A frontend calculator built with HTML, CSS, and JS.</p>
+            <div class="project-links">
+                <button class="btn-sm" onclick="openModal('Calculator App', '...')">A functional arithmetic tool built with vanilla JavaScript</button>
+                <a href="https://github.com/Rohitz24/calculator-app" target="_blank" class="btn-sm github-btn">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="todo.png" alt="Project 2">
+        <div class="project-info">
+            <h3>To-do List App</h3>
+            <p>A productivity tool to manage daily tasks efficiently.</p>
+            <div class="project-links">
+                <button class="btn-sm" onclick="openModal('To-do List App', '...')">A productivity application designed to manage daily tasks efficiently</button>
+                <a href="https://github.com/Rohitz24/to-do-list-app" target="_blank" class="btn-sm github-btn">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="weather.png" alt="Project 3">
+        <div class="project-info">
+            <h3>Weather App</h3>
+            <p>Real-time weather tracking using the OpenWeather API.</p>
+            <div class="project-links">
+                <button class="btn-sm" onclick="openModal('Weather App', '...')">A real-time weather tracking application fetching live global data.</button>
+                <a href="https://github.com/Rohitz24/weatherapp" target="_blank" class="btn-sm github-btn">GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                    <small class="error-msg">Name is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Your Email">
+                    <small class="error-msg">Please enter a valid email</small>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Subject">
+                    <small class="error-msg">Subject is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                    <small class="error-msg">Message cannot be empty</small>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rohit Zade. All Rights Reserved.</p>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Project Title</h2>
+            <p id="modalDesc">Project description goes here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
